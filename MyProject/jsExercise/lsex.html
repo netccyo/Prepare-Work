@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+
+    <form>
+        <input type="text" name="text">
+        <input type="submit" value="전송">
+    </form>
+    <script>
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", mySubmit);
+    //    let input = form.querySelector("input");
+    //    let value = input.value;
+    //    localStorage["name"] = value;
+
+    //    let divName = document.getElementById("name");
+    //    divName.innerHTML = localStorage["name"];
+    let name = localStorage["name"];
+    let div = document.querySelector("#name");
+    if(name) {
+        div.innerHTML = name;
+    }
+    else {
+        div.innerHTML="이름을 입력하세요"
+    }
+        function mySubmit(event) {
+            event.preventDefault();
+            //기본 event 막기 -> form submit을 하게되면 자동적으로 데이터를 가지고 가려하는 것을 막음
+            let form = event.target;
+            let input = form.querySelector("input");
+            div.innerHTML = input.value;
+            localStorage["name"] = input.value;
+        }
+    </script>
+</body>
+</html>
