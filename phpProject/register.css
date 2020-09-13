@@ -1,0 +1,32 @@
+h1{
+    position: absolute;
+}
+
+input{
+    position: absolute;
+    width: 400px;
+    height: 50px;
+}
+
+.id{
+    top: 90px;
+}
+
+.name{
+    top: 160px;
+}
+
+.password{
+    top: 230px;
+}
+
+.passwordcheck{
+    top: 300px;
+}
+
+.register{
+    top: 370px;
+    width: 408px;
+    background-color: #2ECCFA;
+    border: 0;
+}

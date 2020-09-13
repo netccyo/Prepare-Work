@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{display: flex; justify-content: center; align-items: center;}
+        #one{width: 350px; height: 350px; background-color: red; cursor: pointer;}
+        #two{width: 300px; height: 300px; background-color: orangered; cursor: pointer;}
+        #three{width: 250px; height: 250px; background-color: yellow; cursor: pointer;}
+        #four{width: 200px; height: 200px; background-color: green; cursor: pointer;}
+        #five{width: 150px; height: 150px; background-color: blue; cursor: pointer;}
+        #six{width: 100px; height: 100px; background-color: #000080; cursor: pointer;}
+        #seven{width: 50px; height: 50px; background-color: #8b00ff; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <div id="three">
+                <div id="four">
+                    <div id="five">
+                        <div id="six">
+                            <div id="seven"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id="result"></h1>
+    <script>
+        let one = document.getElementById("one");
+        let two = document.getElementById("two");
+        let three = document.getElementById("three");
+        let four = document.getElementById("four");
+        let five = document.getElementById("five");
+        let six = document.getElementById("six");
+        let seven = document.getElementById("seven");
+        let h1 = document.querySelector("#result");
+        one.addEventListener("click",function(event){h1.innerHTML+="일 ";});
+        two.addEventListener("click",function(event){h1.innerHTML+="이 ";});
+        three.addEventListener("click",function(event){h1.innerHTML+="삼 ";});
+        four.addEventListener("click",function(event){h1.innerHTML+="사 ";});
+        five.addEventListener("click",function(event){h1.innerHTML+="오 ";});
+        six.addEventListener("click",function(event){h1.innerHTML+="육 ";});
+        seven.addEventListener("click",function(event){h1.innerHTML+="칠 ";});
+    </script>
+</body>
+</html>
